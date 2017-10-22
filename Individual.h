@@ -14,6 +14,6 @@ public:
         this->size = size;
     }
 
-private:
+private: 
     int size = 10;
 };

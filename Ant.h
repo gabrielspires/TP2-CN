@@ -10,7 +10,7 @@ public:
 
     void readFeromone();
     void writeFeromone();
-
+ 
 private:
     
 };

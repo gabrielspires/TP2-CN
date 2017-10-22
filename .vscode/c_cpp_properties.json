@@ -71,5 +71,14 @@
             }
         }
     ],
+    "linters":
+    {
+        "clang": {
+            "extra_flags": "-std=c++11"
+        },
+        "cppcheck": {
+            "extra_flags": "-std=c++11"
+        }
+    },
     "version": 3
 }
