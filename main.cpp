@@ -8,14 +8,17 @@
 using namespace std;
 
 int main(int argc, char const *argv[]){
-	Ant formiguinha;
+	int num_points, num_pmedians;
+	
 	ifstream entrada;
 	ofstream saida;
- 
+	
 	entrada.open(argv[1]);
 	entrada.close();
 	
-	Graph my_graph(10, 10);
+	Ant formiguinha;
+
+	Graph my_graph(10);
 
 	return 0;
 }

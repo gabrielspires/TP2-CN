@@ -1,3 +1,5 @@
+#include "Parameters.hpp"
+
 int max_interations = 0,
     number_of_ants  = 0;
 

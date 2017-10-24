@@ -9,7 +9,7 @@ public:
     // Graph &operator=(Graph &&) = default;
     // Graph &operator=(const Graph &) = default;
     
-    Graph(int lines, int columns); //Construtor
+    Graph(int num_points); //Construtor
     ~Graph(); //Destrutor
     
 private:

@@ -2,6 +2,7 @@
 
 Ant::Ant()
 {
+    
 }
 
 Ant::~Ant()
