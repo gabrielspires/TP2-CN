@@ -1,4 +1,4 @@
-extern int max_interations,
+extern int max_iterations,
 		   number_of_ants;
 
 extern double initial_feromone_rate,

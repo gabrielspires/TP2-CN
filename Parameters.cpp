@@ -1,6 +1,6 @@
 #include "Parameters.hpp"
 
-int max_interations = 0,
+int max_iterations = 0,
     number_of_ants  = 0;
 
 double initial_feromone_rate 	 = 0.0,
