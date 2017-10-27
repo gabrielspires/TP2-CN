@@ -3,7 +3,7 @@
 
 // #include "Ant.hpp"
 // #include "Graph.hpp"
-// #include "Parameters.hpp"
+#include "Parameters.hpp"
 
 #include "Input.hpp"
 
