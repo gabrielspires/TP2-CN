@@ -7,8 +7,8 @@ Input::Input(std::ifstream &input) {
     getline(input, line, '\n');
     stringstream line_stream(line);
 
-    line_stream >> p;
     line_stream >> n;
+    line_stream >> p;
 
     while(getline(input, line, '\n')) {
 		if(line == "  ") continue; //fim do arquivo
