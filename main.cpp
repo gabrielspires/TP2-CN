@@ -1,24 +1,23 @@
 #include <iostream>
 #include <fstream>
 
-#include "Ant.hpp"
-#include "Graph.hpp"
-#include "Parameters.hpp"
+// #include "Ant.hpp"
+// #include "Graph.hpp"
+// #include "Parameters.hpp"
+
+#include "Input.hpp"
 
 using namespace std;
 
-int main(int argc, char const *argv[]){
-	int num_points, num_pmedians;
-	
+int main(int argc, char const *argv[]){	
 	ifstream entrada;
 	ofstream saida;
-	
 	entrada.open(argv[1]);
-	entrada.close();
+
+	Input input(entrada);
 	
-	Ant formiguinha;
+	input.printPoints();
 
-	Graph my_graph(10);
-
+	entrada.close();
 	return 0;
 }
