@@ -12,8 +12,6 @@ Input::Input(std::ifstream &input) {
 
     while(getline(input, line, '\n')) {
 		if(line == "  ") continue; //fim do arquivo
-  		// line_stream.str(string("")); //Limpa a string pra ler a proxima
-		// line_stream.clear(); //Apaga o buffer da string
 		line_stream << line;
 
 		line_stream >> point.x;
