@@ -11,15 +11,19 @@ typedef struct Point {
     int x, y;
     int capacity, demand;
 }Point;
-    
+
 public:
-    int p, n;
-    
     Input(ifstream &input);
+    ~Input();
     void printPoints();
 
-    ~Input();
+    //Getters Setters
+    int getP();
+    int getN();
+
 private:
+    int n, //Pontos
+        p; //Medianas
     vector<Point> pointVector;
-    
+
 };

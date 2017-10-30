@@ -33,5 +33,9 @@ void Input::printPoints(){
 	}
 }
 
+int Input::getP(){ return p; }
+
+int Input::getN(){ return n; }
+
 Input::~Input(){
 }
