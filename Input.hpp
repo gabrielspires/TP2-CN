@@ -16,14 +16,14 @@ public:
     Input(ifstream &input);
     ~Input();
     void printPoints();
-
+    
     //Getters Setters
     int getP();
     int getN();
-
+    
 private:
     int n, //Pontos
         p; //Medianas
     vector<Point> pointVector;
-
+    
 };

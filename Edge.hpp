@@ -8,6 +8,5 @@ public:
     ~Edge(); //Destrutor
 
 private:
-    double size;
     double feromone_concentration;
 };
