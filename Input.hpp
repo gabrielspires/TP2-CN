@@ -15,11 +15,13 @@ typedef struct Point {
 public:
     Input(ifstream &input);
     ~Input();
-    void printPoints();
+    void printPoints(); //Imprime o input na tela
     
     //Getters Setters
-    int getP();
-    int getN();
+    int getP(); //Retorna o numero de P medianas
+    int getN(); //Retorna o numero de pontos
+    int getX(int index); //Retorna a coordenada X de um ponto
+    int getY(int index); //Retorna a coordenada Y de um ponto
     
 private:
     int n, //Pontos

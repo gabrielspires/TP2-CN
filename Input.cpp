@@ -1,5 +1,13 @@
 #include "Input.hpp"
 
+int Input::getP(){ return p; }
+
+int Input::getN(){ return n; }
+
+int Input::getX(int index){ return pointVector[index].x; }
+
+int Input::getY(int index){ return pointVector[index].y; }
+
 Input::Input(std::ifstream &input) {
     string line, field;
     Point point;
@@ -32,10 +40,6 @@ void Input::printPoints(){
 		cout << pointVector[i].demand << endl;
 	}
 }
-
-int Input::getP(){ return p; }
-
-int Input::getN(){ return n; }
 
 Input::~Input(){
 }
