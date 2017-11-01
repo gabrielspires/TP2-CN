@@ -16,7 +16,9 @@ int main(int argc, char const *argv[]){
 	entrada.open(argv[1]);
 
 	Input input(entrada);
-	Graph graph(input.getN(), input);
+	Graph matrix(input.getN(), input);
+
+	// cout << matrix.graph[0][0].getWeight() << endl;
 
 	entrada.close();
 	return 0;

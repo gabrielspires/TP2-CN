@@ -12,6 +12,7 @@ public:
     void setPheromone(double new_pheromone);
     void updatePheromone(double delta_tau);
     void calculateWeight();
+    double getWeight();
 
     
 private:

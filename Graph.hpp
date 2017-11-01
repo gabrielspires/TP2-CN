@@ -1,5 +1,6 @@
 #include "Edge.hpp"
 #include "Input.hpp"
+#include <cstdlib>
 
 class Graph{
 public:

@@ -11,18 +11,17 @@ Graph::Graph(int num_points, Input input){ //Construtor
     		if(i != j){
                 graph[i][j].x1 = input.getX(i);
                 graph[i][j].y1 = input.getY(i);
-
                 graph[i][j].x2 = input.getX(j);
                 graph[i][j].y2 = input.getY(j);
-
                 graph[i][j].setPheromone(0.0);
+                graph[i][j].calculateWeight();
 
     		}else{ //Diagonal principal
                 graph[i][j].x1 = 0;
                 graph[i][j].y1 = 0;
                 graph[i][j].x2 = 0;
                 graph[i][j].y1 = 0;
-                graph[i][j].weight = 0;
+                graph[i][j].calculateWeight();
                 graph[i][j].setPheromone(0.0);
             }
     	}
@@ -30,10 +29,14 @@ Graph::Graph(int num_points, Input input){ //Construtor
 }
 
 Graph::~Graph(){ //Destrutor
-	int num_points;
-	num_points = sizeof(this->graph)/sizeof(this->graph);
-    for (int i = 0; i < num_points; i++){
-        delete(this->graph[i]);
+	int num_points = 0;
+    for(int i = 1; this->graph[i] != NULL; i++){
+        cout << graph[i][i-1].getWeight() << endl;
     }
-	delete(this->graph);
+    cout << num_points;
+    
+    // for (int i = 0; i < num_points; i++){
+    //     free(this->graph[i]);
+    // }
+	// free(this->graph);
 }

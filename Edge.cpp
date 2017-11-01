@@ -3,6 +3,9 @@
 double Edge::getPheromone(){
     return pheromone_concentration;
 }
+double Edge::getWeight(){
+    return weight;
+}
 
 void Edge::setPheromone(double new_pheromone){
     this->pheromone_concentration = new_pheromone;
