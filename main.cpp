@@ -18,7 +18,12 @@ int main(int argc, char const *argv[]){
 	Input input(entrada);
 	Graph matrix(input.getN(), input);
 
-	// cout << matrix.graph[0][0].getWeight() << endl;
+	for (int i = 0; i < matrix.graph.size(); i++) {
+		for (int j = 0; j < matrix.graph.size(); j++) {
+			cout << matrix.graph[i][j].getWeight() << " ";
+		}
+		cout << endl;
+	}
 
 	entrada.close();
 	return 0;
