@@ -12,10 +12,45 @@ Graph::Graph(int num_points, Input input){ //Construtor
             graph[i][j].y1 = input.getY(i);
             graph[i][j].x2 = input.getX(j);
             graph[i][j].y2 = input.getY(j);
-            graph[i][j].setPheromone(0.0);
+
+            //Inicializa a quantidade de feromonio
+            graph[i][j].setPheromone(t_max);
+
+            //Calcula a distancia entre os dois pontos
             graph[i][j].calculateWeight();
     	}
     }
+    this->best_sum = 1.0/0.0; //Infinite
+}
+
+void Graph::ACO(){
+    int initial_node;
+    double best_solution = 1.0/0.0; //infite
+    double current_solution = 0.0;
+
+
+    initial_node = rand()%graph.size();
+
+    for (int i = 0; i < max_iterations; ++i){
+        for (int j = 0; j < number_of_ants; ++j){
+
+        }
+        if (best_solution > current_solution){
+            best_solution = current_solution;
+        }
+        //Atualiza as trilhas de feromonio
+    }
+
+
+}
+
+void Graph::printWeights(){
+    for (int i = 0; i < this->graph.size(); ++i){
+		for (int j = 0; j < this->graph.size(); ++j){
+			cout << this->graph[i][j].getWeight() << "\t";
+		}
+		cout << endl;
+	}
 }
 
 Graph::~Graph(){ //Destrutor

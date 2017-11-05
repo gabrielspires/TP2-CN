@@ -4,6 +4,8 @@
 #include <fstream>
 #include <sstream>
 
+#include "Parameters.hpp"
+
 using namespace std;
 
 class Input {
@@ -18,6 +20,8 @@ public:
     int getN(); //Retorna o numero de pontos
     int getX(int index); //Retorna a coordenada X de um ponto
     int getY(int index); //Retorna a coordenada Y de um ponto
+
+    void updateParameters();
 
 private:
     typedef struct Point {

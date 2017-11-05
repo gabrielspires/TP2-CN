@@ -15,8 +15,11 @@ public:
     void   calculateWeight();
     double getWeight();
     void   evaporate();
+    bool   hasRelation();
+    void   setRelation(bool status);
 
 private:
+    bool relation;
     double pheromone_concentration;
     double weight; //peso da aresta
 };

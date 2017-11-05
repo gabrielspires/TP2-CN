@@ -8,6 +8,18 @@ int Input::getX(int index){ return pointVector[index].x; }
 
 int Input::getY(int index){ return pointVector[index].y; }
 
+void Input::updateParameters(){
+    max_iterations = 100,
+    number_of_ants = this->getN() - this->getP();
+
+    t_max = number_of_ants,
+    t_min = 0.2,
+    initial_feromone_rate         = t_max,
+    feromone_concentration_weight = 0.0, //alpha
+    function_quality_weight       = 0.0, //beta
+    evaporation_rate              = 0.2; //ro
+}
+
 Input::Input(std::ifstream &input) {
     string line, field;
     Point point;

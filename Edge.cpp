@@ -20,6 +20,14 @@ void Edge::evaporate(){
     this->pheromone_concentration -= evaporation_rate;
 }
 
+bool Edge::hasRelation(){
+    return relation;
+}
+
+void Edge::setRelation(bool status){
+    this->relation = status;
+}
+
 double Edge::getWeight(){
     return weight;
 }
