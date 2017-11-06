@@ -24,7 +24,7 @@ Graph::Graph(int num_points, Input input){ //Construtor
 }
 
 int Graph::transition(){
-    
+
     return 0;
 }
 
@@ -33,13 +33,25 @@ void Graph::ACO(){
     double best_solution = 1.0/0.0; //infite
     double current_solution = 0.0;
 
-    //olha todos os number_of_ants
+    //olha todos os nós number_of_ants
     //itera e olha todos os number_of_ants
     //no final escolhe o que tme mais feromonio
 
-    initial_node = rand()%graph.size();
+    vector<int> initial_p_medians;
+
+    for (int i = 0; i < p; i++) {
+      initial_p_medians.push_back(rand()%graph.size());
+    }
+
+    //Gera numero aleatorio entre 0 e 1
+    uniform_real_distribution<double> unif(0,1);
+  	random_device rand_dev;
+  	mt19937 rand_engine(rand_dev());
+
+    unif(rand_engine);
 
     for (int i = 0; i < max_iterations; ++i){
+
         for (int j = 0; j < number_of_ants; ++j){
 
         }
@@ -48,8 +60,6 @@ void Graph::ACO(){
         }
         //Atualiza as trilhas de feromonio
     }
-
-
 }
 
 void Graph::printWeights(){
