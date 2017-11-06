@@ -23,11 +23,19 @@ Graph::Graph(int num_points, Input input){ //Construtor
     this->best_sum = 1.0/0.0; //Infinite
 }
 
+int Graph::transition(){
+    
+    return 0;
+}
+
 void Graph::ACO(){
     int initial_node;
     double best_solution = 1.0/0.0; //infite
     double current_solution = 0.0;
 
+    //olha todos os number_of_ants
+    //itera e olha todos os number_of_ants
+    //no final escolhe o que tme mais feromonio
 
     initial_node = rand()%graph.size();
 

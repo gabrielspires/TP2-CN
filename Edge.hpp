@@ -9,14 +9,14 @@ public:
     Edge();  //Construtor
     ~Edge(); //Destrutor
 
+    void   setRelation(bool status);
+    bool   hasRelation();
     double getPheromone();
     void   setPheromone(double new_pheromone);
     void   updatePheromone(double delta_tau);
+    void   evaporate();
     void   calculateWeight();
     double getWeight();
-    void   evaporate();
-    bool   hasRelation();
-    void   setRelation(bool status);
 
 private:
     bool relation;

@@ -13,11 +13,11 @@ void Input::updateParameters(){
     number_of_ants = this->getN() - this->getP();
 
     t_max = number_of_ants,
-    t_min = 0.2,
+    t_min = t_max/(2*this->getP());
     initial_feromone_rate         = t_max,
-    feromone_concentration_weight = 0.0, //alpha
-    function_quality_weight       = 0.0, //beta
-    evaporation_rate              = 0.2; //ro
+    feromone_concentration_weight = 1.0,   //alpha
+    function_quality_weight       = 1.0,   //beta
+    evaporation_rate              = 0.2;   //ro
 }
 
 Input::Input(std::ifstream &input) {

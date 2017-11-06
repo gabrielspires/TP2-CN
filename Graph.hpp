@@ -16,4 +16,7 @@ public:
 
 private:
     double best_sum;
+
+    //Métodos do ACO
+    int transition();
 };
