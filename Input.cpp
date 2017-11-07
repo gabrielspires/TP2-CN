@@ -14,7 +14,7 @@ void Input::updateParameters(){
 
     t_max = number_of_ants,
     t_min = t_max/(2*this->getP());
-    initial_feromone_rate         = t_max,
+    initial_feromone_rate         = /*t_max*/ 0.0,
     feromone_concentration_weight = 1.0,   //alpha
     function_quality_weight       = 1.0,   //beta
     evaporation_rate              = 0.2;   //ro

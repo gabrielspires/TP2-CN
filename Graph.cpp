@@ -14,13 +14,16 @@ Graph::Graph(int num_points, Input input){ //Construtor
             graph[i][j].y2 = input.getY(j);
 
             //Inicializa a quantidade de feromonio
-            graph[i][j].setPheromone(t_max);
+            graph[i][j].setPheromone(0.0);
 
             //Calcula a distancia entre os dois pontos
             graph[i][j].calculateWeight();
     	}
     }
     this->best_sum = 1.0/0.0; //Infinite
+
+    this->num_ants = input.getN();
+    this->num_medians = input.getP();
 }
 
 int Graph::transition(){
@@ -29,20 +32,19 @@ int Graph::transition(){
 }
 
 void Graph::ACO(){
-    int initial_node;
     double best_solution = 1.0/0.0; //infite
     double current_solution = 0.0;
+    vector<int> initial_p_medians;
 
     //olha todos os nós number_of_ants
     //itera e olha todos os number_of_ants
     //no final escolhe o que tme mais feromonio
 
-    vector<int> initial_p_medians;
-
-    for (int i = 0; i < p; i++) {
+    //Escolhe aleatoriamente p medianas
+    for (int i = 0; i < num_medians; i++) {
       initial_p_medians.push_back(rand()%graph.size());
     }
-
+    
     //Gera numero aleatorio entre 0 e 1
     uniform_real_distribution<double> unif(0,1);
   	random_device rand_dev;

@@ -4,6 +4,7 @@
 
 #include "Edge.hpp"
 #include "Input.hpp"
+#include "Parameters.hpp"
 
 class Graph{
 public:
@@ -18,7 +19,7 @@ public:
 
 private:
     double best_sum;
-
+    int num_ants, num_medians;
     //Métodos do ACO
     int transition();
 };
