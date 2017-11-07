@@ -15,9 +15,12 @@ public:
 
     void printWeights();
     void ACO();
+    void buildSolution();
+    void updateFeromone();
 
 private:
     double best_sum;
+    int num_p_medians;
 
     //Métodos do ACO
     int transition();
