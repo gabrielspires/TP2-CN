@@ -40,18 +40,6 @@ void Graph::updateFeromone(){
 }
 
 int Graph::selectMedian(double prob){
-
-        /*int sum_of_weight = 0;
-        for(int i=0; i<num_choices; i++) {
-           sum_of_weight += choice_weight[i];
-        }
-        int rnd = random(sum_of_weight);
-        for(int i=0; i<num_choices; i++) {
-          if(rnd < choice_weight[i])
-            return i;
-          rnd -= choice_weight[i];
-        }
-        assert(!"should never get here");*/
     double sum_of_probs = 0.0;
     for (int i = 0; i < graph.size(); ++i){
         sum_of_probs += graph[i][i].getPheromone();
@@ -80,14 +68,16 @@ void Graph::ACO(){
     random_device rand_dev;
     mt19937 rand_engine(rand_dev());
 
-    cout << unif(rand_engine) << endl;
     //olha todos os nós number_of_ants
     //itera e olha todos os number_of_ants
     //no final escolhe o que tme mais feromonio
 
+    double median_prob = unif(rand_engine);
     for (int i = 0; i < this->num_medians; i++) {
-      initial_p_medians.push_back(rand()%graph.size());
+      initial_p_medians.push_back(this->selectMedian(median_prob));
     }
+
+    for
 
     for (int i = 0; i < max_iterations; ++i){
         for (int j = 0; j < number_of_ants; ++j){
@@ -97,7 +87,6 @@ void Graph::ACO(){
     }
 
 
-    unif(rand_engine);
 
     for (int i = 0; i < max_iterations; ++i){
 
