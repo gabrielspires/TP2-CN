@@ -27,7 +27,7 @@ Graph::Graph(int num_points, Input input){ //Construtor
 }
 
 int Graph::transition(){
-
+    // this->
     return 0;
 }
 

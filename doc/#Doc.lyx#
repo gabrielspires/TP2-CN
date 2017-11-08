@@ -123,8 +123,7 @@ de cardinalidade p, tal que a soma das distâncias mínimas de
 
  até todos os outros vértices seja minimizada.
  Consideremos um caso não ideal, onde cada vértice tem ou um peso positivo
- ou negativo.
- Isso da origem a duas fu
+ ou negativo
 \end_layout
 
 \begin_layout Section
