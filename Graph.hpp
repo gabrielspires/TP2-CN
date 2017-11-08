@@ -18,6 +18,7 @@ public:
     void ACO();
     void buildSolution();
     void updateFeromone();
+    int selectMedian(double prob);
 
 private:
     double best_sum;
